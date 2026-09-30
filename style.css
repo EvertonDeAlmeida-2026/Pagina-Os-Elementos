@@ -584,3 +584,92 @@ header div:after {
 
 
 }
+
+/* Ajustes para celulares: o cenário permanece cinematográfico sem cortar conteúdo. */
+@media (max-width:480px) {
+  body {
+    overflow-x:hidden;
+    overflow-y:auto
+  }
+
+  .scene {
+    min-height:100svh
+  }
+
+  nav,main {
+    width:calc(100% - 28px)
+  }
+
+  nav {
+    height:58px;
+    font-size:11px;
+    letter-spacing:.18em
+  }
+
+  nav small {
+    font-size:7px;
+    letter-spacing:.08em
+  }
+
+  main {
+    min-height:calc(100svh - 58px);
+    padding:20px 0 30px;
+    grid-template-rows:auto minmax(230px,1fr) auto
+  }
+
+  header p {
+    font-size:8px;
+    letter-spacing:.25em
+  }
+
+  h1 {
+    font-size:clamp(35px,12vw,52px);
+    letter-spacing:.08em;
+    text-indent:.08em
+  }
+
+  header div {
+    margin-top:12px;
+    gap:8px;
+    font-size:8px;
+    letter-spacing:.13em
+  }
+
+  header div:before,header div:after {
+    width:28px
+  }
+
+  .altar {
+    min-height:250px
+  }
+
+  .altar:before {
+    width:min(82vw,300px)
+  }
+
+  .orb {
+    width:clamp(100px,30vw,138px)
+  }
+
+  .controls {
+    width:100%;
+    gap:clamp(8px,3vw,16px)
+  }
+
+  .controls button {
+    width:clamp(58px,19vw,78px)
+  }
+
+  .controls small {
+    top:calc(100% + 8px);
+    font-size:7px;
+    letter-spacing:.1em
+  }
+
+  .controls button:hover,.controls button:focus,.controls .active {
+    transform:translateY(-6px) scale(1.05)
+  }
+
+  .island.left { left:-19%; top:42% }
+  .island.right { right:-22%; top:37% }
+}
