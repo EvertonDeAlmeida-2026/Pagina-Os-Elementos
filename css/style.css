@@ -1,0 +1,1839 @@
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+
+body {
+
+    overflow: hidden;
+
+    background: #080b18;
+
+}
+
+
+/* ==========================================================
+   PÁGINA
+   ========================================================== */
+
+.pagina {
+
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+    color: white;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+}
+
+
+/* ==========================================================
+   CENÁRIO
+   ========================================================== */
+
+.cenario {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+}
+
+
+/* ==========================================================
+   BACKGROUNDS DOS CENÁRIOS
+   ========================================================== */
+
+/* ==========================================================
+   CENÁRIOS
+   ========================================================== */
+
+.background {
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: scale(1.015);
+
+    will-change:
+        opacity,
+        transform;
+}
+
+/* ==========================================================
+   CENÁRIO ATUAL
+   ========================================================== */
+
+.background-atual {
+
+    background-image:
+        url("../assets/background/neutro.webp");
+
+    opacity: 1;
+
+    z-index: 0;
+
+    transform:
+        scale(1.015);
+}
+
+/* ==========================================================
+   PRÓXIMO CENÁRIO
+   ========================================================== */
+
+.background-proximo {
+
+    opacity: 0;
+
+    z-index: 1;
+
+    transform:
+        scale(1.08);
+
+    transition:
+        opacity 1.4s ease-in-out,
+        transform 1.8s cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+}
+
+
+/* Cenário que está sendo exibido */
+.background-atual {
+
+    background-image:
+        url("../assets/background/neutro.webp");
+
+    opacity: 1;
+
+    z-index: 0;
+
+}
+
+
+/* Cenário que será exibido na transição */
+.background-proximo {
+
+    opacity: 0;
+
+    z-index: 1;
+
+    transition:
+        opacity 1.4s ease-in-out;
+
+}
+
+
+/* ==========================================================
+   ESCURECIMENTO
+   ========================================================== */
+
+.overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 8, 25, 0.35),
+            rgba(5, 8, 25, 0.05) 45%,
+            rgba(3, 7, 15, 0.65)
+        );
+
+}
+
+
+/* ==========================================================
+   VINHETA
+   ========================================================== */
+
+.vignette {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    box-shadow:
+        inset 0 0 160px rgba(0, 0, 0, 0.65);
+
+}
+
+
+/* ==========================================================
+   CABEÇALHO
+   ========================================================== */
+
+.cabecalho {
+
+    position: absolute;
+
+    top: 0;
+    left: 4%;
+    right: 4%;
+
+    height: 62px;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.22);
+
+}
+
+
+.marca {
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+}
+
+
+.status {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.8;
+
+}
+
+
+.status-ponto {
+
+    display: inline-block;
+
+    width: 5px;
+    height: 5px;
+
+    margin-right: 6px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 0 8px white;
+
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.hero {
+
+    position: absolute;
+
+    top: 7%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    text-align: center;
+
+    width: 90%;
+
+}
+
+
+.subtitulo {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 6px;
+
+    opacity: 0.75;
+
+}
+
+
+h1 {
+
+    margin-top: 4px;
+
+    font-size:
+        clamp(48px, 6vw, 92px);
+
+    font-weight: 500;
+
+    letter-spacing: 8px;
+
+    line-height: 1;
+
+    text-shadow:
+        0 4px 20px rgba(0,0,0,0.6);
+
+}
+
+
+.divisor {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 14px;
+
+}
+
+
+.divisor span {
+
+    width: 90px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,0.65);
+
+}
+
+
+.divisor p {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    opacity: 0.85;
+
+}
+
+
+/* ==========================================================
+   ESFERA
+   ========================================================== */
+
+.esfera-container {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: 50%;
+
+    top: 60%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 280px;
+    height: 280px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* ==========================================================
+   BRILHO
+   ========================================================== */
+
+/* ==========================================================
+   HALO / BRILHO DA ESFERA
+   ========================================================== */
+
+.glow {
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(210,245,255,0.9);
+
+    filter:
+        blur(55px);
+
+    opacity: 0.55;
+
+    animation:
+        pulsar-neutro 4s ease-in-out infinite;
+
+    transition:
+        background 1s ease,
+        box-shadow 1s ease,
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+/* ==========================================================
+   TERRA
+   ========================================================== */
+
+.esfera-container.terra .glow {
+
+    background:
+        rgba(150,255,70,0.9);
+
+    box-shadow:
+        0 0 40px rgba(120,255,50,0.8),
+        0 0 90px rgba(80,200,30,0.5);
+
+    animation:
+        pulsar-terra 4s ease-in-out infinite;
+}
+
+/* ==========================================================
+   ÁGUA
+   ========================================================== */
+
+.esfera-container.agua .glow {
+
+    background:
+        rgba(40,200,255,0.9);
+
+    box-shadow:
+        0 0 45px rgba(40,200,255,0.8),
+        0 0 100px rgba(20,120,255,0.5);
+
+    animation:
+        pulsar-agua 5s ease-in-out infinite;
+}
+
+/* ==========================================================
+   AR
+   ========================================================== */
+
+.esfera-container.ar .glow {
+
+    background:
+        rgba(210,245,255,0.95);
+
+    box-shadow:
+        0 0 45px rgba(200,245,255,0.85),
+        0 0 110px rgba(130,220,255,0.5);
+
+    animation:
+        pulsar-ar 3.5s ease-in-out infinite;
+}
+
+/* ==========================================================
+   FOGO
+   ========================================================== */
+
+.esfera-container.fogo .glow {
+
+    background:
+        rgba(255,100,20,0.95);
+
+    box-shadow:
+        0 0 50px rgba(255,100,20,0.9),
+        0 0 110px rgba(255,40,0,0.6);
+
+    animation:
+        pulsar-fogo 2.2s ease-in-out infinite;
+}
+
+/* ==========================================================
+   NEUTRO
+   ========================================================== */
+
+@keyframes pulsar-neutro {
+
+    0%,
+    100% {
+        transform:
+            scale(0.9);
+
+        opacity:
+            0.4;
+    }
+
+    50% {
+        transform:
+            scale(1.15);
+
+        opacity:
+            0.65;
+    }
+}
+
+/* ==========================================================
+   TERRA
+   ========================================================== */
+
+@keyframes pulsar-terra {
+
+    0%,
+    100% {
+        transform:
+            scale(0.85);
+
+        opacity:
+            0.35;
+    }
+
+    50% {
+        transform:
+            scale(1.2);
+
+        opacity:
+            0.7;
+    }
+}
+
+/* ==========================================================
+   ÁGUA
+   ========================================================== */
+
+@keyframes pulsar-agua {
+
+    0%,
+    100% {
+        transform:
+            scale(0.9);
+
+        opacity:
+            0.35;
+    }
+
+    50% {
+        transform:
+            scale(1.25);
+
+        opacity:
+            0.65;
+    }
+}
+
+/* ==========================================================
+   AR
+   ========================================================== */
+
+@keyframes pulsar-ar {
+
+    0%,
+    100% {
+        transform:
+            scale(0.95);
+
+        opacity:
+            0.3;
+    }
+
+    50% {
+        transform:
+            scale(1.3);
+
+        opacity:
+            0.6;
+    }
+}
+
+/* ==========================================================
+   FOGO
+   ========================================================== */
+
+@keyframes pulsar-fogo {
+
+    0%,
+    100% {
+        transform:
+            scale(0.8);
+
+        opacity:
+            0.35;
+    }
+
+    30% {
+        transform:
+            scale(1.15);
+
+        opacity:
+            0.75;
+    }
+
+    55% {
+        transform:
+            scale(0.95);
+
+        opacity:
+            0.5;
+    }
+
+    75% {
+        transform:
+            scale(1.25);
+
+        opacity:
+            0.8;
+    }
+}
+
+
+/* ==========================================================
+   ESFERA
+   ========================================================== */
+
+.esfera {
+    position: relative;
+    z-index: 2;
+
+    width: 220px;
+    height: 220px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 0 12px rgba(220,250,255,1))
+        drop-shadow(0 0 45px rgba(100,210,255,0.7));
+
+    animation:
+        esfera-neutra 5s ease-in-out infinite;
+
+    transition:
+        filter 1s ease;
+}
+
+/* ==========================================================
+   TERRA
+   ========================================================== */
+
+.esfera-container.terra .esfera {
+
+    animation:
+        esfera-terra 4s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 0 12px rgba(210,255,130,1)
+        )
+        drop-shadow(
+            0 0 35px rgba(100,255,50,0.8)
+        )
+        drop-shadow(
+            0 0 65px rgba(80,180,30,0.45)
+        );
+}
+
+/* ==========================================================
+   ÁGUA
+   ========================================================== */
+
+.esfera-container.agua .esfera {
+
+    animation:
+        esfera-agua 5s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 0 12px rgba(210,250,255,1)
+        )
+        drop-shadow(
+            0 0 38px rgba(40,190,255,0.85)
+        )
+        drop-shadow(
+            0 0 70px rgba(20,100,255,0.5)
+        );
+}
+
+/* ==========================================================
+   AR
+   ========================================================== */
+
+.esfera-container.ar .esfera {
+
+    animation:
+        esfera-ar 3.5s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 0 14px rgba(240,255,255,1)
+        )
+        drop-shadow(
+            0 0 42px rgba(150,230,255,0.9)
+        )
+        drop-shadow(
+            0 0 75px rgba(100,200,255,0.45)
+        );
+}
+
+/* ==========================================================
+   FOGO
+   ========================================================== */
+
+.esfera-container.fogo .esfera {
+
+    animation:
+        esfera-fogo 2.2s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 0 14px rgba(255,220,120,1)
+        )
+        drop-shadow(
+            0 0 40px rgba(255,100,20,0.95)
+        )
+        drop-shadow(
+            0 0 75px rgba(255,40,0,0.6)
+        );
+}
+
+/* ==========================================================
+   ANIMAÇÃO NEUTRA
+   ========================================================== */
+
+@keyframes esfera-neutra {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-10px)
+            scale(1.02);
+    }
+}
+
+/* ==========================================================
+   ANIMAÇÃO TERRA
+   ========================================================== */
+
+@keyframes esfera-terra {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-5px)
+            scale(1.04);
+    }
+}
+
+/* ==========================================================
+   ANIMAÇÃO ÁGUA
+   ========================================================== */
+
+@keyframes esfera-agua {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    25% {
+        transform:
+            translateY(-8px)
+            scale(1.02);
+    }
+
+    50% {
+        transform:
+            translateY(-14px)
+            scale(1.04);
+    }
+
+    75% {
+        transform:
+            translateY(-6px)
+            scale(1.02);
+    }
+}
+
+/* ==========================================================
+   ANIMAÇÃO AR
+   ========================================================== */
+
+@keyframes esfera-ar {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(1);
+    }
+
+    25% {
+        transform:
+            translateY(-8px)
+            rotate(-1deg)
+            scale(1.02);
+    }
+
+    50% {
+        transform:
+            translateY(-16px)
+            rotate(1deg)
+            scale(1.04);
+    }
+
+    75% {
+        transform:
+            translateY(-7px)
+            rotate(-1deg)
+            scale(1.02);
+    }
+}
+
+/* ==========================================================
+   ANIMAÇÃO FOGO
+   ========================================================== */
+
+@keyframes esfera-fogo {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    20% {
+        transform:
+            translateY(-5px)
+            scale(1.04);
+    }
+
+    40% {
+        transform:
+            translateY(1px)
+            scale(0.98);
+    }
+
+    60% {
+        transform:
+            translateY(-8px)
+            scale(1.06);
+    }
+
+    80% {
+        transform:
+            translateY(-2px)
+            scale(1.01);
+    }
+}
+
+
+/* ==========================================================
+   ANIMAÇÕES
+   ========================================================== */
+
+@keyframes pulsar {
+
+    0%,
+    100% {
+
+        transform: scale(0.9);
+
+        opacity: 0.4;
+
+    }
+
+    50% {
+
+        transform: scale(1.15);
+
+        opacity: 0.65;
+
+    }
+
+}
+
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+}
+
+
+/* ==========================================================
+   ELEMENTOS
+   ========================================================== */
+
+.elementos {
+
+    position: absolute;
+
+    z-index: 20;
+
+    left: 50%;
+
+    bottom: 28px;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+}
+
+
+.elemento {
+
+    width: 72px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+
+    transition:
+        transform .35s ease;
+
+}
+
+
+.elemento img {
+
+    width: 54px;
+
+    height: 54px;
+
+    object-fit: contain;
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
+
+}
+
+
+.elemento span {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.75;
+
+}
+
+
+.elemento:hover {
+
+    transform:
+        translateY(-7px);
+
+}
+
+
+.elemento:hover img {
+
+    transform:
+        scale(1.18);
+
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(255,255,255,0.8)
+        );
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 700px) {
+
+    .pagina {
+
+        min-height: 0;
+
+    }
+
+
+    .cabecalho {
+
+        height: 52px;
+
+        left: 20px;
+        right: 20px;
+
+    }
+
+
+    .marca {
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .status {
+
+        font-size: 7px;
+
+    }
+
+
+    .hero {
+
+        top: 9%;
+
+        width: 95%;
+
+    }
+
+
+    .subtitulo {
+
+        font-size: 7px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            clamp(32px, 10vw, 55px);
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .divisor {
+
+        gap: 8px;
+
+    }
+
+
+    .divisor span {
+
+        width: 40px;
+
+    }
+
+
+    .divisor p {
+
+        font-size: 7px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .esfera-container {
+
+        top: 55%;
+
+        width: 210px;
+        height: 210px;
+
+    }
+
+
+    .esfera {
+
+        width: 165px;
+        height: 165px;
+
+    }
+
+
+    .elementos {
+
+        bottom: 18px;
+
+        gap: 10px;
+
+    }
+
+
+    .elemento {
+
+        width: 60px;
+
+    }
+
+
+    .elemento img {
+
+        width: 44px;
+        height: 44px;
+
+    }
+
+
+    .elemento span {
+
+        font-size: 6px;
+
+    }
+
+}
+
+/* ==========================================================
+   ELEMENTO ATIVO
+   ========================================================== */
+
+.elemento.ativo {
+
+    transform: translateY(-10px) scale(1.08);
+
+}
+
+
+.elemento.ativo img {
+
+    transform: scale(1.18);
+
+}
+
+
+/* ==========================================================
+   GLOW POR ELEMENTO
+   ========================================================== */
+
+.elemento.ativo[data-elemento="terra"] img {
+
+    filter:
+        drop-shadow(0 0 8px rgba(150, 255, 60, 0.9))
+        drop-shadow(0 0 20px rgba(100, 255, 40, 0.7));
+
+}
+
+
+.elemento.ativo[data-elemento="agua"] img {
+
+    filter:
+        drop-shadow(0 0 8px rgba(40, 190, 255, 0.9))
+        drop-shadow(0 0 20px rgba(30, 150, 255, 0.7));
+
+}
+
+
+.elemento.ativo[data-elemento="ar"] img {
+
+    filter:
+        drop-shadow(0 0 8px rgba(220, 245, 255, 0.95))
+        drop-shadow(0 0 20px rgba(150, 220, 255, 0.7));
+
+}
+
+
+.elemento.ativo[data-elemento="fogo"] img {
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 150, 30, 0.95))
+        drop-shadow(0 0 20px rgba(255, 70, 10, 0.8));
+
+}
+
+/* ==========================================================
+   PARTÍCULAS - TERRA
+   ========================================================== */
+
+.particulas-terra {
+    position: absolute;
+    inset: -120px;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+.esfera-container.terra .particulas-terra {
+    opacity: 1;
+}
+
+/* Cada partícula */
+.particula-terra {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: #d8ff8a;
+
+    box-shadow:
+        0 0 5px rgba(210, 255, 120, 1),
+        0 0 12px rgba(120, 255, 60, 0.9),
+        0 0 22px rgba(80, 220, 40, 0.5);
+
+    animation:
+        subir-terra var(--duracao) ease-in-out infinite,
+        brilho-terra var(--brilho) ease-in-out infinite;
+}
+
+/* Movimento para cima */
+@keyframes subir-terra {
+
+    0% {
+
+        transform:
+            translate(
+                var(--x-inicial),
+                80px
+            )
+            scale(0.3);
+
+        opacity: 0;
+    }
+
+    15% {
+
+        opacity: 1;
+    }
+
+    50% {
+
+        transform:
+            translate(
+                var(--x-meio),
+                -20px
+            )
+            scale(1);
+
+        opacity: 0.9;
+    }
+
+    80% {
+
+        opacity: 0.6;
+    }
+
+    100% {
+
+        transform:
+            translate(
+                var(--x-final),
+                -180px
+            )
+            scale(0.2);
+
+        opacity: 0;
+    }
+}
+
+/* Variação do brilho */
+@keyframes brilho-terra {
+
+    0%,
+    100% {
+
+        filter: brightness(0.8);
+    }
+
+    50% {
+
+        filter: brightness(1.6);
+    }
+}
+
+/* ==========================================================
+   PARTÍCULAS - ÁGUA
+   ========================================================== */
+
+.particulas-agua {
+    position: absolute;
+    inset: -120px;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+/* Ativa as partículas quando Água estiver selecionada */
+.esfera-container.agua .particulas-agua {
+    opacity: 1;
+}
+
+/* ==========================================================
+   BOLHAS
+   ========================================================== */
+
+.particula-agua {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(255,255,255,0.95),
+            rgba(130,235,255,0.75) 25%,
+            rgba(30,170,255,0.45) 65%,
+            rgba(20,120,255,0.1)
+        );
+
+    border: 1px solid rgba(190,245,255,0.8);
+
+    box-shadow:
+        0 0 6px rgba(100,220,255,0.9),
+        0 0 15px rgba(40,180,255,0.7),
+        0 0 28px rgba(20,130,255,0.35);
+
+    animation:
+        subir-agua var(--duracao) ease-in infinite,
+        brilho-agua var(--brilho) ease-in-out infinite;
+}
+
+/* ==========================================================
+   MOVIMENTO DAS BOLHAS
+   ========================================================== */
+
+@keyframes subir-agua {
+
+    0% {
+
+        transform:
+            translate(
+                var(--x-inicial),
+                80px
+            )
+            scale(0.35);
+
+        opacity: 0;
+    }
+
+    15% {
+
+        opacity: 0.85;
+    }
+
+    40% {
+
+        transform:
+            translate(
+                var(--x-meio),
+                -10px
+            )
+            scale(1);
+
+        opacity: 0.9;
+    }
+
+    70% {
+
+        opacity: 0.65;
+    }
+
+    100% {
+
+        transform:
+            translate(
+                var(--x-final),
+                -190px
+            )
+            scale(0.55);
+
+        opacity: 0;
+    }
+}
+
+/* ==========================================================
+   VARIAÇÃO DO BRILHO
+   ========================================================== */
+
+@keyframes brilho-agua {
+
+    0%,
+    100% {
+
+        filter:
+            brightness(0.8);
+    }
+
+    50% {
+
+        filter:
+            brightness(1.5);
+    }
+}
+
+/* ==========================================================
+   PARTÍCULAS - AR
+   ========================================================== */
+
+.particulas-ar {
+    position: absolute;
+    inset: -140px;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+/* Ativa quando Ar estiver selecionado */
+.esfera-container.ar .particulas-ar {
+    opacity: 1;
+}
+
+/* ==========================================================
+   CORRENTES DE VENTO
+   ========================================================== */
+
+.particula-ar {
+    position: absolute;
+
+    height: 2px;
+
+    border-radius: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(210,245,255,0.35),
+        rgba(255,255,255,0.95),
+        rgba(150,225,255,0.65),
+        transparent
+    );
+
+    box-shadow:
+        0 0 5px rgba(210,245,255,0.8),
+        0 0 14px rgba(130,215,255,0.55);
+
+    transform-origin: center;
+
+    animation:
+        vento-ar var(--duracao) ease-in-out infinite,
+        brilho-ar var(--brilho) ease-in-out infinite;
+}
+
+/* ==========================================================
+   MOVIMENTO DO VENTO
+   ========================================================== */
+
+@keyframes vento-ar {
+
+    0% {
+
+        transform:
+            translateX(
+                var(--inicio)
+            )
+            translateY(
+                var(--y-inicio)
+            )
+            rotate(
+                var(--rotacao)
+            )
+            scaleX(0.3);
+
+        opacity: 0;
+    }
+
+    15% {
+
+        opacity: 0.8;
+    }
+
+    50% {
+
+        transform:
+            translateX(
+                var(--meio)
+            )
+            translateY(
+                var(--y-meio)
+            )
+            rotate(
+                var(--rotacao)
+            )
+            scaleX(1);
+            
+        opacity: 1;
+    }
+
+    80% {
+
+        opacity: 0.6;
+    }
+
+    100% {
+
+        transform:
+            translateX(
+                var(--fim)
+            )
+            translateY(
+                var(--y-fim)
+            )
+            rotate(
+                var(--rotacao)
+            )
+            scaleX(0.4);
+
+        opacity: 0;
+    }
+}
+
+/* ==========================================================
+   BRILHO DO VENTO
+   ========================================================== */
+
+@keyframes brilho-ar {
+
+    0%,
+    100% {
+
+        filter:
+            brightness(0.7);
+    }
+
+    50% {
+
+        filter:
+            brightness(1.6);
+    }
+}
+
+/* ==========================================================
+   PARTÍCULAS - FOGO
+   ========================================================== */
+
+.particulas-fogo {
+    position: absolute;
+    inset: -120px;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Ativa quando Fogo estiver selecionado */
+.esfera-container.fogo .particulas-fogo {
+    opacity: 1;
+}
+
+/* ==========================================================
+   BRASAS
+   ========================================================== */
+
+.particula-fogo {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #fff8c4 0%,
+            #ffd45a 25%,
+            #ff7b16 60%,
+            #ff2d00 100%
+        );
+
+    box-shadow:
+        0 0 5px rgba(255,220,100,1),
+        0 0 12px rgba(255,120,20,0.9),
+        0 0 24px rgba(255,50,0,0.6);
+
+    animation:
+        subir-fogo var(--duracao) ease-out infinite,
+        brilho-fogo var(--brilho) ease-in-out infinite;
+}
+
+/* ==========================================================
+   MOVIMENTO DAS BRASAS
+   ========================================================== */
+
+@keyframes subir-fogo {
+
+    0% {
+
+        transform:
+            translate(
+                var(--x-inicial),
+                70px
+            )
+            scale(0.3);
+
+        opacity: 0;
+    }
+
+    10% {
+
+        opacity: 1;
+    }
+
+    35% {
+
+        transform:
+            translate(
+                var(--x-meio),
+                -20px
+            )
+            scale(1);
+
+        opacity: 0.95;
+    }
+
+    65% {
+
+        transform:
+            translate(
+                var(--x-quase),
+                -100px
+            )
+            scale(0.7);
+
+        opacity: 0.75;
+    }
+
+    100% {
+
+        transform:
+            translate(
+                var(--x-final),
+                -210px
+            )
+            scale(0.15);
+
+        opacity: 0;
+    }
+}
+
+/* ==========================================================
+   BRILHO DAS BRASAS
+   ========================================================== */
+
+@keyframes brilho-fogo {
+
+    0%,
+    100% {
+
+        filter:
+            brightness(0.8);
+    }
+
+    50% {
+
+        filter:
+            brightness(1.8);
+    }
+}
+
+/* ==========================================================
+   ATIVAÇÃO DO ELEMENTO
+   Pequeno pulso quando um elemento é selecionado
+   ========================================================== */
+
+.esfera-container.ativando .esfera {
+    animation:
+        pulso-elemento 0.8s ease-out;
+}
+
+.esfera-container.ativando .glow {
+    animation:
+        pulso-glow 0.8s ease-out;
+}
+
+@keyframes pulso-elemento {
+
+    0% {
+        transform:
+            scale(1);
+    }
+
+    35% {
+        transform:
+            scale(1.12);
+    }
+
+    65% {
+        transform:
+            scale(0.97);
+    }
+
+    100% {
+        transform:
+            scale(1);
+    }
+}
+
+@keyframes pulso-glow {
+
+    0% {
+        transform:
+            scale(1);
+
+        opacity:
+            0.5;
+    }
+
+    35% {
+        transform:
+            scale(1.5);
+
+        opacity:
+            0.9;
+    }
+
+    100% {
+        transform:
+            scale(1);
+
+        opacity:
+            0.55;
+    }
+}
+
+/* ==========================================================
+   RETORNO AO CENÁRIO NEUTRO
+   ========================================================== */
+
+.esfera-container.dissipando .esfera {
+    animation: dissipar-esfera 1.2s ease-out forwards;
+}
+
+.esfera-container.dissipando .glow {
+    animation: dissipar-glow 1.2s ease-out forwards;
+}
+
+/* Esfera perde gradualmente a intensidade */
+@keyframes dissipar-esfera {
+
+    0% {
+        transform: scale(1);
+        filter: brightness(1.2);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.94);
+        filter: brightness(1.5);
+        opacity: 0.85;
+    }
+
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+        opacity: 1;
+    }
+}
+
+
+/* Glow desaparece suavemente */
+@keyframes dissipar-glow {
+
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.35;
+        transform: scale(0.75);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}

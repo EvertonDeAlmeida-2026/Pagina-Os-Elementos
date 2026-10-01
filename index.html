@@ -1,71 +1,192 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		
-		<title>Os Elementos</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<div class="scene" id="scene">
-			<div class="stars"></div>
-			<div class="mountains">
-			</div>
-			<div class="island left">
-				<i></i>
-			</div>
-			<div class="island right">
-				<i></i>
-			</div>
-			
-			<div class="particles" id="particles"></div>
-			
-			<nav>
-				<span>JOGO 
-					<b>OS ELEMENTOS</b>
-				</span>
-				<small>● EM DESENVOLVIMENTO</small>
-			</nav>
-			
-			<main>
-				<header>
-					<p>UMA JORNADA DE EQUILÍBRIO</p>
-					<h1>OS ELEMENTOS</h1>
-					<div>RESTAURE O EQUILÍBRIO</div>
-				</header>
-				
-				<section class="altar">
-					<div class="orb" aria-label="Essência alienígena">
-						<span class="energy-ring ring-one"></span>
-						<span class="energy-ring ring-two"></span>
-						<img class="absorbed-art" alt="Energia absorvida">
-						<span class="orb-core"></span>
-					</div>
-				</section>
-				<section class="controls">
-					<button class="earth" data-element="earth">
-						<img src="images/terra.png" alt="Elemento Terra">
-						<small>TERRA</small>
-					</button>
-					
-					<button class="water" data-element="water">
-						<img src="images/agua.png" alt="Elemento Água">
-						<small>ÁGUA</small>
-					</button>
-					
-					<button class="air" data-element="air">
-						<img src="images/ar.png" alt="Elemento Ar">
-						<small>AR</small>
-					</button>
-					
-					<button class="fire" data-element="fire">
-						<img src="images/fogo.png" alt="Elemento Fogo">
-						<small>FOGO</small>
-					</button>
-				</section>
-			</main>
-		</div>
-		<script src="script.js"></script>
-	</body>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Os Elementos</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+<main class="pagina">
+
+    <!-- =====================================================
+         CENÁRIO
+         ===================================================== -->
+
+    <div class="cenario">
+
+		<!-- Cenário atual -->
+		<div class="background background-atual"></div>
+
+		<!-- Próximo cenário usado na transição -->
+		<div class="background background-proximo"></div>
+
+		<div class="overlay"></div>
+
+		<div class="vignette"></div>
+
+	</div>
+
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
+
+    <header class="cabecalho">
+
+        <div class="marca">
+            JOGO OS ELEMENTOS
+        </div>
+
+        <div class="status">
+
+            <span class="status-ponto"></span>
+
+            EM DESENVOLVIMENTO
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         TÍTULO
+         ===================================================== -->
+
+    <section class="hero">
+
+        <div class="subtitulo">
+            UMA JORNADA DE EQUILÍBRIO
+        </div>
+
+        <h1>
+            OS ELEMENTOS
+        </h1>
+
+        <div class="divisor">
+
+            <span></span>
+
+            <p>
+                RESTAURE O EQUILÍBRIO
+            </p>
+
+            <span></span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ESFERA
+         ===================================================== -->
+
+    <section class="esfera-container">
+		<div class="particulas-terra"></div>
+		<div class="particulas-agua"></div>
+		<div class="particulas-ar"></div>
+		<div class="particulas-fogo"></div>
+		<div class="glow"></div>
+		<img src="assets/images/esfera.png" alt="" class="esfera">
+	</section>
+
+
+    <!-- =====================================================
+         ELEMENTOS
+         ===================================================== -->
+
+    <footer class="elementos">
+
+        <button
+            class="elemento"
+            data-elemento="terra"
+        >
+
+            <img
+                src="assets/icons/terra.png"
+                alt="Terra"
+            >
+
+            <span>
+                TERRA
+            </span>
+
+        </button>
+
+
+        <button
+            class="elemento"
+            data-elemento="agua"
+        >
+
+            <img
+                src="assets/icons/agua.png"
+                alt="Água"
+            >
+
+            <span>
+                ÁGUA
+            </span>
+
+        </button>
+
+
+        <button
+            class="elemento"
+            data-elemento="ar"
+        >
+
+            <img
+                src="assets/icons/ar.png"
+                alt="Ar"
+            >
+
+            <span>
+                AR
+            </span>
+
+        </button>
+
+
+        <button
+            class="elemento"
+            data-elemento="fogo"
+        >
+
+            <img
+                src="assets/icons/fogo.png"
+                alt="Fogo"
+            >
+
+            <span>
+                FOGO
+            </span>
+
+        </button>
+
+    </footer>
+
+
+</main>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
 </html>
