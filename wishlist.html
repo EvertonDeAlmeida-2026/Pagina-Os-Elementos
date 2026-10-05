@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Wishlist | Os Elementos</title>
+
+    <link
+        rel="stylesheet"
+        href="css/wishlist.css"
+    >
+
+</head>
+
+<body>
+
+<main class="wishlist-pagina">
+
+
+    <!-- =====================================================
+         CENÁRIO
+         ===================================================== -->
+
+    <div class="wishlist-cenario"></div>
+
+    <div class="wishlist-overlay"></div>
+
+    <div class="wishlist-vignette"></div>
+
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
+
+    <header class="wishlist-cabecalho">
+
+        <a
+            href="index.html"
+            class="wishlist-voltar"
+        >
+
+            ← VOLTAR
+
+        </a>
+
+
+        <div class="wishlist-marca">
+
+            JOGO OS ELEMENTOS
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO
+         ===================================================== -->
+
+    <section class="wishlist-conteudo">
+
+
+        <div class="wishlist-subtitulo">
+
+            UMA JORNADA DE EQUILÍBRIO
+
+        </div>
+
+
+        <h1>
+
+            WISHLIST
+
+        </h1>
+
+
+        <div class="wishlist-divisor">
+
+            <span></span>
+
+            <p>
+                ENTRE PARA A JORNADA
+            </p>
+
+            <span></span>
+
+        </div>
+
+
+        <p class="wishlist-descricao">
+
+            Deixe seus dados e seja avisado
+            quando <strong>Os Elementos</strong>
+            estiver disponível.
+
+        </p>
+
+
+        <!-- =================================================
+             FORMULÁRIO
+             ================================================= -->
+
+        <form
+            class="wishlist-form"
+            id="wishlistForm"
+        >
+
+
+            <!-- NOME -->
+
+            <div class="campo">
+
+                <label for="nome">
+                    NOME
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    autocomplete="name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- E-MAIL -->
+
+            <div class="campo">
+
+                <label for="email">
+                    E-MAIL
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu melhor e-mail"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+
+            <!-- BOTÃO -->
+
+            <button
+                type="submit"
+                class="wishlist-botao"
+            >
+
+                QUERO ENTRAR NA WISHLIST
+
+            </button>
+
+
+        </form>
+
+
+        <!-- =================================================
+             MENSAGEM DE SUCESSO
+             ================================================= -->
+
+        <div
+            class="wishlist-sucesso"
+            id="wishlistSucesso"
+        >
+
+            <div class="sucesso-simbolo">
+                ✦
+            </div>
+
+            <h2>
+                VOCÊ ESTÁ NA LISTA
+            </h2>
+
+            <p>
+                Avisaremos quando
+                <strong>Os Elementos</strong>
+                estiver disponível.
+            </p>
+
+            <a
+                href="index.html"
+                class="sucesso-voltar"
+            >
+                VOLTAR PARA O JOGO
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

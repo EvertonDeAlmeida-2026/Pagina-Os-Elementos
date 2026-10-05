@@ -1837,3 +1837,105 @@ h1 {
         transform: scale(0.5);
     }
 }
+
+/* ==========================================================
+   ÁREA DIREITA DO CABEÇALHO
+   ========================================================== */
+
+.cabecalho-direita {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+}
+
+
+/* ==========================================================
+   LINK WISHLIST
+   ========================================================== */
+
+.wishlist-link {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,0.9);
+
+    text-decoration: none;
+
+    position: relative;
+
+    transition:
+        color .3s ease,
+        opacity .3s ease;
+
+}
+
+
+/* Linha abaixo do Wishlist */
+
+.wishlist-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -5px;
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,0.65);
+
+    transform:
+        scaleX(0.7);
+
+    transform-origin: center;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+
+}
+
+
+/* Hover */
+
+.wishlist-link:hover {
+
+    color: white;
+
+}
+
+
+.wishlist-link:hover::after {
+
+    transform: scaleX(1);
+
+    background: white;
+
+}
+
+.cabecalho-direita {
+
+    gap: 12px;
+
+}
+
+.wishlist-link {
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+}
