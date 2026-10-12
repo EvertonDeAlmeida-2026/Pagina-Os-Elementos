@@ -50,9 +50,7 @@ body {
     color: white;
 
     font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
+        "Almendra", Georgia, serif;
 
 }
 
@@ -184,7 +182,7 @@ body {
 
     text-decoration: none;
 
-    font-family: Arial, sans-serif;
+    font-family: "Alegreya Sans", sans-serif;
 
     font-size: 9px;
 
@@ -241,7 +239,7 @@ body {
 
 .wishlist-subtitulo {
 
-    font-family: Arial, sans-serif;
+    font-family: "Alegreya Sans", sans-serif;
 
     font-size: 9px;
 
@@ -309,7 +307,7 @@ body {
 
 .wishlist-divisor p {
 
-    font-family: Arial, sans-serif;
+    font-family: "Alegreya Sans", sans-serif;
 
     font-size: 8px;
 
@@ -331,7 +329,7 @@ body {
     margin:
         24px auto 26px;
 
-    font-family: Arial, sans-serif;
+    font-family: "Alegreya Sans", sans-serif;
 
     font-size: 13px;
 
@@ -384,7 +382,7 @@ body {
 
     margin-bottom: 7px;
 
-    font-family: Arial, sans-serif;
+    font-family: "Alegreya Sans", sans-serif;
 
     font-size: 8px;
 
@@ -417,7 +415,7 @@ body {
 
     color: white;
 
-    font-family: Arial, sans-serif;
+    font-family: "Alegreya Sans", sans-serif;
 
     font-size: 13px;
 
@@ -477,7 +475,7 @@ body {
 
     cursor: pointer;
 
-    font-family: Arial, sans-serif;
+    font-family: "Alegreya Sans", sans-serif;
 
     font-size: 9px;
 
@@ -569,7 +567,7 @@ body {
 
     margin-top: 14px;
 
-    font-family: Arial, sans-serif;
+    font-family: "Alegreya Sans", sans-serif;
 
     font-size: 13px;
 
@@ -591,7 +589,7 @@ body {
 
     text-decoration: none;
 
-    font-family: Arial, sans-serif;
+    font-family: "Alegreya Sans", sans-serif;
 
     font-size: 8px;
 
@@ -754,4 +752,8 @@ body {
 
     }
 
-}
+}/* Allow smaller screens to scroll through the complete form. */
+body{overflow:auto}.wishlist-pagina{min-height:100svh;height:auto;overflow:visible;padding-bottom:48px}.wishlist-form[hidden]{display:none!important}.consent{display:flex;align-items:flex-start;gap:10px;text-align:left;font:12px/1.6 "Alegreya Sans",sans-serif;color:#ddd}.consent input{margin-top:4px;flex-shrink:0}.honeypot{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}#wishlistStatus{font:13px/1.5 "Alegreya Sans",sans-serif;color:#ffd0bd}
+.wishlist-conteudo{position:relative;top:auto;left:auto;transform:none;margin:0 auto;padding-top:110px}.wishlist-pagina{position:relative}
+
+.wishlist-conteudo h1,.wishlist-sucesso h2{font-family:"Almendra",Georgia,serif;letter-spacing:1px}.wishlist-descricao,.wishlist-sucesso p{font-size:17px}.campo label,.wishlist-botao{font-size:13px}.consent{font-size:15px}input,button{font-family:"Alegreya Sans",sans-serif}

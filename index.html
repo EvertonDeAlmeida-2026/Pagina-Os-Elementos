@@ -1,196 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Os Elementos</title>
-	
-	<link rel="icon" type="assets/icons/svg+xml" href="assets/icons/favicon.svg">
-    <link rel="stylesheet" href="css/style.css">
-
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Os Elementos | Uma aventura pelas forças da natureza</title>
+<meta name="description" content="Assuma os quatro elementos, cumpra missões para salvar animais e reconstrua um mundo destruído.">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg"><link rel="stylesheet" href="css/home.css"><script src="js/home.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;600;700&family=Almendra:wght@400;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Os Elementos">
+<meta property="og:title" content="Os Elementos — Um mundo para reconstruir">
+<meta property="og:description" content="Uma pequena esfera, quatro elementos e uma grande missão: salvar animais e reconstruir um mundo destruído. Entre na lista de espera.">
+<meta property="og:url" content="https://oselementos.com.br/">
+<meta property="og:image" content="https://oselementos.com.br/assets/images/og-os-elementos.jpg">
+<meta property="og:image:secure_url" content="https://oselementos.com.br/assets/images/og-os-elementos.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="600">
+<meta property="og:image:alt" content="Os Elementos: um orbe cercado por água, terra, ar e fogo em um mundo de fantasia com animais.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Os Elementos — Um mundo para reconstruir">
+<meta name="twitter:description" content="Salve animais e reconstrua um mundo destruído com a força dos quatro elementos.">
+<meta name="twitter:image" content="https://oselementos.com.br/assets/images/og-os-elementos.jpg">
+<link rel="canonical" href="https://oselementos.com.br/">
 </head>
-
 <body>
-
-<main class="pagina">
-
-    <!-- =====================================================
-         CENÁRIO
-         ===================================================== -->
-
-    <div class="cenario">
-
-		<!-- Cenário atual -->
-		<div class="background background-atual"></div>
-
-		<!-- Próximo cenário usado na transição -->
-		<div class="background background-proximo"></div>
-
-		<div class="overlay"></div>
-
-		<div class="vignette"></div>
-
-	</div>
-
-
-    <!-- =====================================================
-         CABEÇALHO
-         ===================================================== -->
-
-    <header class="cabecalho">
-
-        <div class="marca">
-            JOGO OS ELEMENTOS
-        </div>
-
-        <div class="cabecalho-direita">
-
-			<div class="status">
-
-				<span class="status-ponto"></span>
-
-				EM DESENVOLVIMENTO
-
-			</div>
-
-			<a href="wishlist.html" class="wishlist-link">WISHLIST</a>
-
-		</div>
-
-    </header>
-
-
-    <!-- =====================================================
-         TÍTULO
-         ===================================================== -->
-
-    <section class="hero">
-
-        <div class="subtitulo">
-            UMA JORNADA DE EQUILÍBRIO
-        </div>
-
-        <h1>
-            OS ELEMENTOS
-        </h1>
-
-        <div class="divisor">
-
-            <span></span>
-
-            <p>
-                RESTAURE O EQUILÍBRIO
-            </p>
-
-            <span></span>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         ESFERA
-         ===================================================== -->
-
-    <section class="esfera-container">
-		<div class="particulas-terra"></div>
-		<div class="particulas-agua"></div>
-		<div class="particulas-ar"></div>
-		<div class="particulas-fogo"></div>
-		<div class="glow"></div>
-		<img src="assets/images/esfera.png" alt="" class="esfera">
-	</section>
-
-
-    <!-- =====================================================
-         ELEMENTOS
-         ===================================================== -->
-
-    <footer class="elementos">
-
-        <button
-            class="elemento"
-            data-elemento="terra"
-        >
-
-            <img
-                src="assets/icons/terra.png"
-                alt="Terra"
-            >
-
-            <span>
-                TERRA
-            </span>
-
-        </button>
-
-
-        <button
-            class="elemento"
-            data-elemento="agua"
-        >
-
-            <img
-                src="assets/icons/agua.png"
-                alt="Água"
-            >
-
-            <span>
-                ÁGUA
-            </span>
-
-        </button>
-
-
-        <button
-            class="elemento"
-            data-elemento="ar"
-        >
-
-            <img
-                src="assets/icons/ar.png"
-                alt="Ar"
-            >
-
-            <span>
-                AR
-            </span>
-
-        </button>
-
-
-        <button
-            class="elemento"
-            data-elemento="fogo"
-        >
-
-            <img
-                src="assets/icons/fogo.png"
-                alt="Fogo"
-            >
-
-            <span>
-                FOGO
-            </span>
-
-        </button>
-
-    </footer>
-
-
+<a class="skip" href="#aventura">Ir para o conteúdo</a>
+<header><a class="brand" href="index.html">OS ELEMENTOS<small>UM JOGO DA PROCICS</small></a><nav aria-label="Navegação principal"><a href="#aventura">A aventura</a><a href="#elementos">Os elementos</a><a class="outline" href="wishlist.html">Entrar na lista de espera ↗</a></nav></header>
+<main>
+<section class="hero"><img class="cover" src="assets/images/os-elementos-cover.png" alt="Os Elementos: um orbe, uma raposa, um coelho e um pássaro em um mundo de água, terra, ar e fogo." width="1774" height="887" fetchpriority="high"><div class="hero-bottom"><div><span class="eyebrow">NATUREZA · TRANSFORMAÇÃO · DESCOBERTA</span><h1>Uma pequena esfera.<br>Um mundo para reconstruir.</h1></div><a class="button" href="#aventura">Conheça a jornada ↓</a></div></section>
+<section class="story section" id="aventura"><div><span class="eyebrow">● EM DESENVOLVIMENTO</span><h2>A natureza guia.<br>Você transforma.</h2></div><div class="copy"><p>Em um mundo destruído, uma esfera assume as propriedades da água, do fogo, da terra e do ar para cumprir missões, salvar animais e reconstruir o que foi perdido. Cada transformação abre novas possibilidades para avançar nessa jornada.</p><p>Em um mundo sem seres humanos, os quatro elementos são a força para resgatar a vida e reconstruir o mundo.</p><a class="text-link" href="wishlist.html">Faça parte dessa jornada ↗</a></div></section>
+<section class="section elements orb-section" id="elementos" aria-label="Explore os quatro elementos">
+<div class="element-orb" data-form="terra" role="img" aria-label="Orbe de terra"><span class="orb-art" aria-hidden="true"></span><span class="orb-atmosphere" aria-hidden="true"></span><span class="orb-body" aria-hidden="true"><span class="orb-flow flow-one"></span><span class="orb-flow flow-two"></span><span class="orb-flow flow-three"></span><span class="orb-core"></span></span><span class="orb-particles" aria-hidden="true"></span></div>
+<div class="orb-controls" role="group" aria-label="Transformar o orbe">
+<button type="button" data-element="terra" aria-label="Terra" title="Terra" aria-pressed="true"><img src="assets/icons/terra.png" alt=""></button>
+<button type="button" data-element="agua" aria-label="Água" title="Água" aria-pressed="false"><img src="assets/icons/agua.png" alt=""></button>
+<button type="button" data-element="ar" aria-label="Ar" title="Ar" aria-pressed="false"><img src="assets/icons/ar.png" alt=""></button>
+<button type="button" data-element="fogo" aria-label="Fogo" title="Fogo" aria-pressed="false"><img src="assets/icons/fogo.png" alt=""></button>
+</div><span class="sr-only" id="orb-status" role="status"></span>
+</section>
+<section class="section join"><span class="eyebrow">MISSÕES PARA SALVAR. ELEMENTOS PARA RECONSTRUIR.</span><h2>A jornada está<br>apenas começando.</h2><p>Os Elementos está em desenvolvimento.<br>Entre na lista de espera e acompanhe o próximo passo.</p><a class="button" href="wishlist.html">Entrar na lista de espera ↗</a></section>
 </main>
+<footer><a class="brand" href="index.html">OS ELEMENTOS<small>UM JOGO DA PROCICS</small></a><p>Água, fogo, terra e ar. Uma só jornada.</p><a href="#">Voltar ao topo ↑</a></footer>
+</body></html>
 
 
-<script src="js/script.js"></script>
 
-</body>
 
-</html>
+
+
+
+

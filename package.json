@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "wrangler": "^4.145.0"
+  },
+  "scripts": {
+    "build": "node scripts/prepare-deploy.mjs",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
+  }
+}

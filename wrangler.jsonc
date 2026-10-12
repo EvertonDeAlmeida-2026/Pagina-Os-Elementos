@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pagina-os-elementos",
+  "main": "src/worker.mjs",
+  "vars": {
+    "CONTACT_RECIPIENTS": "procics@procics.com,pedro.bastos@procics.com"
+  },
+  "send_email": [{
+    "name": "EMAIL",
+    "allowed_sender_addresses": ["site@procics.com.br"],
+    "allowed_destination_addresses": ["procics@procics.com", "pedro.bastos@procics.com"]
+  }],
+  "compatibility_date": "2026-09-30",
+  "build": {
+    "command": "node scripts/prepare-deploy.mjs"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  }
+}

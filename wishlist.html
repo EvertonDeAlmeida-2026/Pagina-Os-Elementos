@@ -10,11 +10,31 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Wishlist | Os Elementos</title>
+    <title>Lista de espera | Os Elementos</title>
 
     <link rel="stylesheet" href="css/wishlist.css">
-	<link rel="icon" type="assets/icons/svg+xml" href="assets/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;600;700&family=Almendra:wght@400;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Os Elementos">
+<meta property="og:title" content="Lista de espera — Os Elementos">
+<meta property="og:description" content="Uma pequena esfera, quatro elementos e uma grande missão: salvar animais e reconstruir um mundo destruído. Entre na lista de espera.">
+<meta property="og:url" content="https://oselementos.com.br/wishlist">
+<meta property="og:image" content="https://oselementos.com.br/assets/images/og-os-elementos.jpg">
+<meta property="og:image:secure_url" content="https://oselementos.com.br/assets/images/og-os-elementos.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="600">
+<meta property="og:image:alt" content="Os Elementos: um orbe cercado por água, terra, ar e fogo em um mundo de fantasia com animais.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lista de espera — Os Elementos">
+<meta name="twitter:description" content="Salve animais e reconstrua um mundo destruído com a força dos quatro elementos.">
+<meta name="twitter:image" content="https://oselementos.com.br/assets/images/og-os-elementos.jpg">
+<link rel="canonical" href="https://oselementos.com.br/wishlist">
 </head>
 
 <body>
@@ -74,7 +94,7 @@
 
         <h1>
 
-            WISHLIST
+            LISTA DE ESPERA
 
         </h1>
 
@@ -124,7 +144,7 @@
                     id="nome"
                     name="nome"
                     placeholder="Digite seu nome"
-                    autocomplete="name"
+                    autocomplete="name" maxlength="100"
                     required
                 >
 
@@ -144,21 +164,21 @@
                     id="email"
                     name="email"
                     placeholder="Digite seu melhor e-mail"
-                    autocomplete="email"
+                    autocomplete="email" maxlength="254"
                     required
                 >
 
             </div>
 
 
-            <!-- BOTÃO -->
+            <label class="consent"><input type="checkbox" name="consent" required> Autorizo a Procics a entrar em contato por e-mail sobre Os Elementos.</label><div class="honeypot" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div><p id="wishlistStatus" role="alert"></p><!-- BOTÃO -->
 
             <button
                 type="submit"
                 class="wishlist-botao"
             >
 
-                QUERO ENTRAR NA WISHLIST
+                QUERO ENTRAR NA LISTA DE ESPERA
 
             </button>
 
@@ -180,11 +200,11 @@
             </div>
 
             <h2>
-                VOCÊ ESTÁ NA LISTA
+                você está na lista de espera!
             </h2>
 
             <p>
-                Avisaremos quando
+                A equipe recebeu sua inscrição para avisar quando
                 <strong>Os Elementos</strong>
                 estiver disponível.
             </p>
@@ -204,8 +224,13 @@
 
 </main>
 
-<script src="js/script.js"></script>
+<script src="js/wishlist.js"></script>
 
 </body>
 
 </html>
+
+
+
+
+
